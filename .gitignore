@@ -28,7 +28,7 @@ replay_pid*
 target/
 
 # Local database credentials
-src\main\resources\developer.properties
+/src/main/resources/developer.properties
 
 # Environment files
 .env

@@ -1,6 +1,7 @@
 package com.hangoutplanner.pojo;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,33 +19,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  * @see org.springframework.data.mongodb.core.mapping.Document
  */
+@Getter
+@Setter
+@NoArgsConstructor
 @Document(collection = "activities")
 public class Activity {
-
-    @Getter
     @Id
     private String id;
-
-    @Getter
-    @Setter
     private String name;
-
-    @Setter
-    @Getter
     private String category;
-
-    @Setter
     private Integer estimatedCost;
-
-    /**
-     * Creates an empty Activity object.
-     *
-     * <p>This constructor is provided for frameworks such as Spring Data
-     * MongoDB that may need to instantiate an object before populating
-     * its fields.
-     */
-    public Activity() {
-    }
 
     /**
      * Creates an Activity with the specified name, category, and estimated cost.
@@ -58,14 +42,4 @@ public class Activity {
         this.category = category;
         this.estimatedCost = estimatedCost;
     }
-
-    /**
-     * Returns the estimated cost of the activity.
-     *
-     * @return the estimated cost as a double
-     */
-    public Integer getEstimatedCost() {
-        return estimatedCost;
-    }
-
 }

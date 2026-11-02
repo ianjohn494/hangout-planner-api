@@ -15,6 +15,6 @@ package com.hangoutplanner.service;
  * @see com.hangoutplanner.pojo.Activity
  * @see com.hangoutplanner.repository.ActivityRepository
  */
-public class ActivityService {
+public interface ActivityService {
 
 }

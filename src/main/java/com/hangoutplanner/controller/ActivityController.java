@@ -9,11 +9,13 @@ import java.util.List;
 /**
  * REST controller for managing activities in the Hangout Planner API.
  *
- * <p>Exposes HTTP endpoints under {@code /api/activities} for retrieving
+ * <p>
+ * Exposes HTTP endpoints under {@code /api/activities} for retrieving
  * activity data. Allows cross-origin requests from the local frontend
  * running at {@code http://localhost:4200}.
  *
- * <p>Uses {@link ActivityRepository} to access activity data and return
+ * <p>
+ * Uses {@link ActivityRepository} to access activity data and return
  * results to clients as JSON responses.
  *
  * @see Activity
@@ -21,7 +23,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/activities")
-@CrossOrigin(origins = "http://localhost:4200")
 public class ActivityController {
 
     private final ActivityRepository repository;
@@ -38,7 +39,8 @@ public class ActivityController {
     /**
      * Retrieves all activities stored in the repository.
      *
-     * <p>Handles HTTP GET requests to {@code /api/activities} and returns
+     * <p>
+     * Handles HTTP GET requests to {@code /api/activities} and returns
      * the activities as a JSON array.
      *
      * @return a list containing all activities returned by the repository;
